@@ -14,6 +14,9 @@ jobs:
       - name: Build the Docker image
         run: docker build . --tag snakemake/snakemake-image-kubeflow
       - name: Run tests
+        # The source and the chmod are needed because github actions seems to do some
+        # suprising things to the container when running it, which don't happen when
+        # running it locally. This is a workaround to make the tests pass.
         run: |
           for cmd in "snakemake --version" "which setup-wizard"
           do
