@@ -30,10 +30,8 @@ jobs:
       - name: Checkout code
         uses: actions/checkout@v4
       
-      - name: Publish to Registry
-        uses: sergeysova/docker-publish-action@v1
+      - name: Build and publish
+        uses: macbre/push-to-ghcr@v13
         with:
-          username: ${{ github.actor }}
-          password: ${{ secrets.GITHUB_TOKEN }}
-          registry: ghcr.io
-          image: snakemake/snakemake-image-kubeflow
+          image_name: snakemake-image-kubeflow
+          github_token: ${{ secrets.GITHUB_TOKEN }}
