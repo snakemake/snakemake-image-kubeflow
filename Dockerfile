@@ -12,6 +12,7 @@ ENV SNAKEMAKE_PROFILE=default
 
 RUN source ~/.bashrc && \
     pixi global install snakemake --with snakemake-executor-plugin-kubernetes --with snakemake-storage-plugin-s3 && \
-    pixi global install python --with inquirerpy --with pyyaml
+    pixi global install python --with inquirerpy --with pyyaml && \
+    pixi global install s5cmd
 
 # TODO spawn wizard automatically when starting a terminal?
