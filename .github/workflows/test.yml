@@ -1,0 +1,22 @@
+name: test
+
+on:
+  push:
+    branches: [ "main" ]
+  pull_request:
+    branches: [ "main" ]
+
+jobs:
+  build:
+    runs-on: ubuntu-latest
+    steps:
+      - uses: actions/checkout@v4
+      - name: Build the Docker image
+        run: docker build . --name snakemake/snakemake-image-kubeflow
+      - name: Run tests
+        run: |
+          docker run --rm snakemake/snakemake-image-kubeflow snakemake --version
+          docker run --rm snakemake/snakemake-image-kubeflow snakemake --help
+          docker run --rm snakemake/snakemake-image-kubeflow snakemake --list-plugins
+          docker run --rm snakemake/snakemake-image-kubeflow snakemake --list-profiles
+          docker run --rm snakemake/snakemake-image-kubeflow which setup-wizard
