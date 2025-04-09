@@ -16,7 +16,7 @@ jobs:
       - name: Run tests
         run: |
           docker run --rm snakemake/snakemake-image-kubeflow bash -c 'snakemake --version'
-          docker run --rm snakemake/snakemake-image-kubeflow snakemake --help
+          docker run --entrypoint bash --rm snakemake/snakemake-image-kubeflow snakemake --help
           docker run --rm snakemake/snakemake-image-kubeflow snakemake --list-plugins
           docker run --rm snakemake/snakemake-image-kubeflow snakemake --list-profiles
           docker run --rm snakemake/snakemake-image-kubeflow which setup-wizard
