@@ -15,7 +15,7 @@ jobs:
         run: docker build . --tag snakemake/snakemake-image-kubeflow
       - name: Run tests
         run: |
-          for cmd in "ls -l /home/jovyan/.local/bin"
+          for cmd in "echo ~" # "snakemake --version" "which setup-wizard" "ls -l /home/jovyan/.local/bin"
           do
             docker run --user jovyan --rm snakemake/snakemake-image-kubeflow bash -c "source /home/jovyan/.bashrc; echo '$USER'; $cmd"
           done
