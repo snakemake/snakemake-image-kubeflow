@@ -17,5 +17,5 @@ jobs:
         run: |
           for cmd in "snakemake --version" "setup-wizard"
           do
-            docker run --user jovyan --rm snakemake/snakemake-image-kubeflow bash -c "$cmd"
+            docker run --user jovyan --rm snakemake/snakemake-image-kubeflow bash --rcfile /home/jovyan/.bashrc -c "$cmd"
           done
