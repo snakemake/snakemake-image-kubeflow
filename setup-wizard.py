@@ -79,4 +79,5 @@ with open(profile_path, "w") as profile:
         "default-storage-provider": "s3",
         "default-storage-prefix": answer["S3-prefix"],
         "software-deployment-method": "conda",
+        "show-failed-logs": True,
     }, profile)
