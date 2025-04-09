@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.5](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.4...v1.0.5) (2025-04-09)
+
+
+### Bug Fixes
+
+* fix permissions of github workflow job ([2d4bd26](https://github.com/snakemake/snakemake-image-kubeflow/commit/2d4bd26709135fa3e285a317b98f80c82eb55a09))
+
 ## [1.0.4](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.3...v1.0.4) (2025-04-09)
 
 
