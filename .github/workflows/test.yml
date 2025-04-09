@@ -15,7 +15,7 @@ jobs:
         run: docker build . --tag snakemake/snakemake-image-kubeflow
       - name: Run tests
         run: |
-          docker run --rm snakemake/snakemake-image-kubeflow snakemake --version
+          docker run --rm snakemake/snakemake-image-kubeflow bash -c 'snakemake --version'
           docker run --rm snakemake/snakemake-image-kubeflow snakemake --help
           docker run --rm snakemake/snakemake-image-kubeflow snakemake --list-plugins
           docker run --rm snakemake/snakemake-image-kubeflow snakemake --list-profiles
