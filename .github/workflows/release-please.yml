@@ -33,5 +33,5 @@ jobs:
       - name: Build and publish
         uses: macbre/push-to-ghcr@v13
         with:
-          image_name: snakemake-image-kubeflow
+          image_name: snakemake/snakemake-image-kubeflow
           github_token: ${{ secrets.GITHUB_TOKEN }}
