@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.3](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.2...v1.0.3) (2025-04-09)
+
+
+### Bug Fixes
+
+* use different action ([c240559](https://github.com/snakemake/snakemake-image-kubeflow/commit/c240559430abaceaad0968b60b9ab3b012344355))
+
 ## [1.0.2](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.1...v1.0.2) (2025-04-09)
 
 
