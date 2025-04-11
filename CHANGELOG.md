@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.7](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.6...v1.0.7) (2025-04-10)
+
+
+### Bug Fixes
+
+* fix permissions ([7203fde](https://github.com/snakemake/snakemake-image-kubeflow/commit/7203fdea6cd357e4bed9926c2205f3a186568f2d))
+
 ## [1.0.6](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.5...v1.0.6) (2025-04-10)
 
 
