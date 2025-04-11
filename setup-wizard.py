@@ -5,15 +5,6 @@ import subprocess as sp
 from InquirerPy import prompt
 import yaml
 
-# Write as .secrets
-# # snakemake
-# export SNAKEMAKE_STORAGE_S3_ACCESS_KEY=
-# export SNAKEMAKE_STORAGE_S3_SECRET_KEY=
-
-# # s5cmd
-# export AWS_ACCESS_KEY=$SNAKEMAKE_STORAGE_S3_ACCESS_KEY
-# export AWS_SECRET_ACCESS_KEY=$SNAKEMAKE_STORAGE_S3_SECRET_KEY
-
 
 secrets_path = Path.home() / ".secrets"
 profile_path = Path.home() / ".config" / "snakemake" / "default" / "config.yaml"
@@ -33,7 +24,7 @@ def get_default_from_profile(key):
         with open(profile_path, "r") as f:
             profile = yaml.safe_load(f)
             if key in profile:
-                return {"default": yaml.safe_load(f).get(key)}
+                return {"default": profile.get(key)}
     return {}
 
 
@@ -41,18 +32,23 @@ questions = [
     {
         'type': 'input',
         'name': 'S3-access-key',
-        'message': 'Enter S3 access key',
+        'message': 'Enter S3 access key:',
     } | get_default_secret("SNAKEMAKE_STORAGE_S3_ACCESS_KEY"),
     {
         "type": "input",
         "name": "S3-secret-key",
-        "message": "Enter S3 secret key",
+        "message": "Enter S3 secret key:",
     } | get_default_secret("SNAKEMAKE_STORAGE_S3_SECRET_KEY"),
     {
         "type": "input",
         "name": "S3-prefix",
-        "message": "Enter S3 prefix (e.g. s3://yourbucket/)",
+        "message": "Enter S3 prefix (e.g. s3://yourbucket/):",
     } | get_default_from_profile("default-storage-prefix"),
+    {
+        "type": "input",
+        "name": "S3-endpoint-url",
+        "message": "Enter S3 endpoint URL (e.g. https://s3.kite.ume.de):",
+    } | get_default_from_profile("storage-s3-endpoint-url"),
     {
         "type": "input",
         "name": "kubernetes-namespace",
@@ -63,6 +59,7 @@ questions = [
 answer = prompt(questions)
 
 if not answer["S3-prefix"].startswith("s3://"):
+    breakpoint()
     raise ValueError("Error: given S3 prefix does not start with s3://")
 
 
@@ -80,4 +77,11 @@ with open(profile_path, "w") as profile:
         "default-storage-prefix": answer["S3-prefix"],
         "software-deployment-method": "conda",
         "show-failed-logs": True,
+        "storage-s3-endpoint-url": answer["S3-endpoint-url"],
+        "default-resources": [],
     }, profile)
+
+print(
+    "Setup complete. Please run the following in your terminal to use the "
+    "new credentials:\nsource ~/.secrets"
+)
