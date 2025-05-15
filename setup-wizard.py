@@ -83,5 +83,5 @@ with open(profile_path, "w") as profile:
 
 print(
     "Setup complete. Please run the following in your terminal to use the "
-    "new credentials:\nsource ~/.secrets"
+    "new credentials:\nsource ~/.bashrc"
 )
