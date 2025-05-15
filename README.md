@@ -48,3 +48,11 @@ s5cmd --help
 ```
 
 for usage instructions.
+
+## Update running container
+
+To update a running container to the latest versions of the contained tools (including Snakemake and its plugins), run
+
+```bash
+pixi global update
+```
