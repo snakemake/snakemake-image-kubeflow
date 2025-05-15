@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.8](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.7...v1.0.8) (2025-05-15)
+
+
+### Bug Fixes
+
+* fix setup-wizard ([9712248](https://github.com/snakemake/snakemake-image-kubeflow/commit/97122481fca6674779392c4aa7a381de449082f9))
+
 ## [1.0.7](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.6...v1.0.7) (2025-04-10)
 
 
