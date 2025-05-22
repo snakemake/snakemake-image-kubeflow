@@ -41,6 +41,8 @@ jobs:
           paths_released: ${{ needs.release-please.outputs.paths_released }}
         run: |
           echo "Version: $tag"
+          echo "Tag name: $name"
+          echo "Paths released: $paths_released"
 
       - name: Build and publish
         uses: macbre/push-to-ghcr@v15
