@@ -34,9 +34,13 @@ jobs:
     steps:
       - name: Checkout code
         uses: actions/checkout@v4
+
+      - uses: little-core-labs/get-git-tag@v3.0.1
+        id: version
       
       - name: Build and publish
         uses: macbre/push-to-ghcr@v13
         with:
           image_name: snakemake/snakemake-image-kubeflow
           github_token: ${{ secrets.GITHUB_TOKEN }}
+          image_tag: ${{ steps.version.outputs.tag }}
