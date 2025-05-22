@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.11](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.10...v1.0.11) (2025-05-22)
+
+
+### Bug Fixes
+
+* get version from release-please ([ab716fb](https://github.com/snakemake/snakemake-image-kubeflow/commit/ab716fb4d07b50850d77a5caaf63c173610fd128))
+
 ## [1.0.10](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.9...v1.0.10) (2025-05-22)
 
 
