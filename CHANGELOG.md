@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.9](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.8...v1.0.9) (2025-05-22)
+
+
+### Bug Fixes
+
+* set image tag ([fc0a9c3](https://github.com/snakemake/snakemake-image-kubeflow/commit/fc0a9c3d5f4a1dd180d614ed156f0e595dc9ece6))
+
 ## [1.0.8](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.7...v1.0.8) (2025-05-15)
 
 
