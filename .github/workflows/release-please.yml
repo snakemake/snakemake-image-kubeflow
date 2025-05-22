@@ -38,7 +38,12 @@ jobs:
       - name: Get version
         uses: little-core-labs/get-git-tag@v3.0.1
         id: version
-      
+
+      - env:
+          tag: ${{ steps.version.outputs.tag }}
+        run: |
+          echo "Version: $tag"
+
       - name: Build and publish
         uses: macbre/push-to-ghcr@v15
         with:
