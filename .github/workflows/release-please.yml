@@ -15,6 +15,7 @@ jobs:
     runs-on: ubuntu-latest
     outputs:
       release_created: ${{ steps.release.outputs.release_created }}
+      version: ${{ steps.release.outputs.version }}
     steps:
       - uses: googleapis/release-please-action@v4
         id: release
@@ -37,8 +38,6 @@ jobs:
 
       - env:
           tag: ${{ needs.release-please.outputs.version }}
-          name: ${{ needs.release-please.outputs.tag_name }}
-          paths_released: ${{ needs.release-please.outputs.paths_released }}
         run: |
           echo "Version: $tag"
           echo "Tag name: $name"
