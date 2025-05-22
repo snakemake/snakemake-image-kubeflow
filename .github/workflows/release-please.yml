@@ -37,6 +37,8 @@ jobs:
 
       - env:
           tag: ${{ needs.release-please.outputs.version }}
+          name: ${{ needs.release-please.outputs.tag_name }}
+          paths_released: ${{ needs.release-please.outputs.paths_released }}
         run: |
           echo "Version: $tag"
 
