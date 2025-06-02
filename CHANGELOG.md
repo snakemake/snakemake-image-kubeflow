@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.15](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.14...v1.0.15) (2025-06-02)
+
+
+### Bug Fixes
+
+* add v prefix to container image version tag ([2dd66f8](https://github.com/snakemake/snakemake-image-kubeflow/commit/2dd66f89475f3a16f578cc8faee45c898a38d913))
+
 ## [1.0.14](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.13...v1.0.14) (2025-05-22)
 
 
