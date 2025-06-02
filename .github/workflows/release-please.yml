@@ -49,3 +49,4 @@ jobs:
           image_name: snakemake/snakemake-image-kubeflow
           github_token: ${{ secrets.GITHUB_TOKEN }}
           image_tag: v${{ needs.release-please.outputs.version }}
+          extra_args: "--tag snakemake/snakemake-image-kubeflow:latest"
