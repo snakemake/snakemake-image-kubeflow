@@ -41,11 +41,6 @@ questions = [
     } | get_default_secret("SNAKEMAKE_STORAGE_S3_SECRET_KEY"),
     {
         "type": "input",
-        "name": "S3-prefix",
-        "message": "Enter S3 prefix (e.g. s3://yourbucket/):",
-    } | get_default_from_profile("default-storage-prefix"),
-    {
-        "type": "input",
         "name": "S3-endpoint-url",
         "message": "Enter S3 endpoint URL (e.g. https://s3.kite.ume.de):",
     } | get_default_from_profile("storage-s3-endpoint-url"),
@@ -74,7 +69,6 @@ with open(profile_path, "w") as profile:
         "executor": "kubernetes",
         "kubernetes-namespace": answer["kubernetes-namespace"],
         "default-storage-provider": "s3",
-        "default-storage-prefix": answer["S3-prefix"],
         "software-deployment-method": "conda",
         "show-failed-logs": True,
         "storage-s3-endpoint-url": answer["S3-endpoint-url"],
