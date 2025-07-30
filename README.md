@@ -7,7 +7,7 @@ The image assumes that your kubeflow instance grants you access to a kubernetes 
 ## Notebook setup
 
 1. Start creation of a new **vscode** notebook.
-2. Click "Custom Notebook", "Advanced Options", check "Custom image", and insert `ghcr.io/snakemake/snakemake-image-kubeflow` as custom image.
+2. Click "Custom Notebook", "Advanced Options", check "Custom image", and insert `ghcr.io/snakemake/snakemake-image-kubeflow:v1.0.17` as custom image.
 3. Select at least 3 cores and 8GB RAM. These resources will only be needed for running the main Snakemake process. Your jobs will be send to kubernetes.
 4. Delete the Workspace volume. There may be no workspace volumne in the notebook because that would overwrite the preinstalled snakemake and setup scripts.
 5. Select or create a data volume (add new volume or create existing volume). This can be shared across many notebooks.
