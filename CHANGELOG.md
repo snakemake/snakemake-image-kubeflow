@@ -1,5 +1,13 @@
 # Changelog
 
+## [1.0.18](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.17...v1.0.18) (2025-07-30)
+
+
+### Bug Fixes
+
+* bump Snakemake to latest stable version ([7988061](https://github.com/snakemake/snakemake-image-kubeflow/commit/798806188c96ad3b03f2cd2762a5a6a83aea1a8d))
+* separately publish latest ([7f8a95e](https://github.com/snakemake/snakemake-image-kubeflow/commit/7f8a95e8052d18b6278cbc3f232afb9544a2c8a3))
+
 ## [1.0.17](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.16...v1.0.17) (2025-06-17)
 
 
