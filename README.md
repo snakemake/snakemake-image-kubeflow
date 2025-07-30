@@ -29,17 +29,18 @@ Afterwards, Snakemake is available as command `snakemake` in any terminal within
 For running a given workflow (in a folder containing `workflow/Snakefile` or just `Snakefile`), run
 
 ```bash
-snakemake -n
+snakemake -n --default-storage-prefix s3://yourbucket/yourproject
 ```
 
 to perform a dry-run (without actual execution), and
 
 ```bash
-snakemake -j 10
+snakemake -j 10 --default-storage-prefix s3://yourbucket/yourproject
 ```
 
 to execute the workflow with 10 parallel jobs.
 That number should be ajusted according the the etiquette rules in your kubeflow cluster.
+Note that you can persist the storage prefix in a [workflow specific profile](https://snakemake.readthedocs.io/en/stable/executing/cli.html#profiles).
 
 For inspecting the S3 storage, the container image provides ``s5cmd``, see
 
