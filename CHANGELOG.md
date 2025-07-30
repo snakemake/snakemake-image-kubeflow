@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.19](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.18...v1.0.19) (2025-07-30)
+
+
+### Bug Fixes
+
+* remove prefix (user should give it upon running) ([7a3801c](https://github.com/snakemake/snakemake-image-kubeflow/commit/7a3801cedb70b819906f59caff4aacec36d51272))
+
 ## [1.0.18](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.17...v1.0.18) (2025-07-30)
 
 
