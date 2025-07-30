@@ -49,4 +49,10 @@ jobs:
           image_name: snakemake/snakemake-image-kubeflow
           github_token: ${{ secrets.GITHUB_TOKEN }}
           image_tag: v${{ needs.release-please.outputs.version }}
-          extra_args: "--tag snakemake/snakemake-image-kubeflow:latest"
+
+      - name: Build and publish latest
+        uses: macbre/push-to-ghcr@v15
+        with:
+          image_name: snakemake/snakemake-image-kubeflow
+          github_token: ${{ secrets.GITHUB_TOKEN }}
+          image_tag: latest
