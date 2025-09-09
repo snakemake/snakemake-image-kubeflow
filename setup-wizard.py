@@ -53,11 +53,6 @@ questions = [
 
 answer = prompt(questions)
 
-if not answer["S3-prefix"].startswith("s3://"):
-    breakpoint()
-    raise ValueError("Error: given S3 prefix does not start with s3://")
-
-
 with open(secrets_path, "w") as secrets:
     print(f"export SNAKEMAKE_STORAGE_S3_ACCESS_KEY={answer['S3-access-key']}", file=secrets)
     print(f"export SNAKEMAKE_STORAGE_S3_SECRET_KEY={answer['S3-secret-key']}", file=secrets)
