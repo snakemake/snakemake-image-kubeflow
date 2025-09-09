@@ -1,5 +1,12 @@
 # Changelog
 
+## [1.0.20](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.19...v1.0.20) (2025-09-09)
+
+
+### Bug Fixes
+
+* remove S3 prefix validation check ([#22](https://github.com/snakemake/snakemake-image-kubeflow/issues/22)) ([2ace0fc](https://github.com/snakemake/snakemake-image-kubeflow/commit/2ace0fc8fb9f6e36140949cd96a2a4bb49ebdc58))
+
 ## [1.0.19](https://github.com/snakemake/snakemake-image-kubeflow/compare/v1.0.18...v1.0.19) (2025-07-30)
 
 
